@@ -18,7 +18,8 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	implementation 'com.github.Tfarcenim:ExtraTagsFabric:Tag'
+	implementation 'com.github.Tfarcenim:ExtraTagsFabric:1.16.x-SNAPSHOT'
+	implementation 'com.github.RedstoneParadox:Marionette:0.3.0-beta'
 	modApi "me.shedaniel.cloth:config-2:4.5.6"
 	
 	modCompile "com.github.vini2003:spinnery:${project.spinnery_version}"
