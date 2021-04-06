@@ -21,10 +21,9 @@ dependencies {
 	implementation 'com.github.Tfarcenim:ExtraTagsFabric:1.16.x-SNAPSHOT'
 	implementation 'com.github.RedstoneParadox:Marionette:0.3.0-beta'
 	implementation 'com.github.Siphalor:nbt-crafting:1.16-2.0-SNAPSHOT'
-	modApi "me.shedaniel.cloth:config-2:4.5.6"
-	
-	modCompile "com.github.vini2003:spinnery:${project.spinnery_version}"
-	include "com.github.vini2003:spinnery:${project.spinnery_version}"
+    modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
@@ -74,6 +73,10 @@ repositories {
 	maven {
 		name = "Spinnery"
 		url  "https://dl.bintray.com/spinnery/Spinnery"
+	}	
+	maven {
+		name = "cloth config"
+		url = "https://maven.shedaniel.me/"
 	}	
 }
 
